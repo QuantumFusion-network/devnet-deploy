@@ -1,14 +1,14 @@
 #!/bin/bash
 
 function deploy_local {
-  docker-compose up -d
+  docker compose -f ./local/docker-compose.yml up -d
 }
 
 function deploy_vm {
   VM_IP=$1
   NODE_DIR=$2
 
-  docker-compose -f docker-compose.yml up -d
+  docker compose -f docker-compose.yml up -d
 }
 
 case "$1" in

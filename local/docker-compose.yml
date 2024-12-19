@@ -13,8 +13,7 @@ services:
     environment:
       - NETWORK=local
       - CHAINSPEC=dev
-    command: --dev --chain dev
-
+    command: --chain dev
   node2:
     image: parity/substrate:latest
     container_name: node2
@@ -27,8 +26,7 @@ services:
     environment:
       - NETWORK=local
       - CHAINSPEC=dev
-    command: --dev --chain dev
-
+    command: --chain dev
   node3:
     image: parity/substrate:latest
     container_name: node3
@@ -41,4 +39,4 @@ services:
     environment:
       - NETWORK=local
       - CHAINSPEC=dev
-    command: --dev --chain dev
+    command: --chain dev
