@@ -13,8 +13,6 @@ vm/node2/data/
 vm/node3/data/
 
 *.env
-**/Dockerfile
-**/docker-compose.yml
 
 .dockerignore
 docker-compose.override.yml

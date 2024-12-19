@@ -1,0 +1,44 @@
+{
+    "name": "Development",
+    "id": "dev",
+    "specName": "dev",
+    "protocolId": "substrate-dev",
+    "chainType": "Live",
+    "genesisHash": "0x...",
+    "paraId": 1000,
+    "roles": {
+      "authority": {
+        "threshold": 1,
+        "keys": [
+          {
+            "sr25519": "5Erz...5z5z5z"
+          }
+        ]
+      }
+    },
+    "runtime": {
+      "version": "latest",
+      "stateVersion": 0,
+      "blockTime": 6
+    },
+    "network": {
+      "port": 30333,
+      "rpcPort": 9933,
+      "wsPort": 9944,
+      "allowOrigins": "*"
+    },
+    "properties": {
+      "tokenDecimals": 12,
+      "tokenSymbol": "DEV",
+      "endowment": "1000000000000",
+      "existentialDeposit": "500"
+    },
+    "dkg": {
+      "authorities": [
+        {
+          "id": "5Erz...5z5z5z"
+        }
+      ]
+    }
+  }
+  
