@@ -1,7 +1,10 @@
 #!/bin/bash
 
 function deploy_local {
+  rm -rf ./local/data
+
   docker compose -f ./local/docker-compose.yml up -d
+  
 }
 
 function deploy_vm {

@@ -15,7 +15,7 @@ services:
     environment:
       - NETWORK=local
       - CHAINSPEC=dev
-    command: --chain dev
+    command: --validator --chain dev --name node1 --alice --unsafe-rpc-external --rpc-methods unsafe --rpc-cors all
 
   node2:
     image: parity/substrate:latest
@@ -31,7 +31,7 @@ services:
     environment:
       - NETWORK=local
       - CHAINSPEC=dev
-    command: --chain dev
+    command: --validator --chain dev --name node2 --bob
 
   node3:
     image: parity/substrate:latest
@@ -47,7 +47,7 @@ services:
     environment:
       - NETWORK=local
       - CHAINSPEC=dev
-    command: --chain dev
+    command: --validator --chain dev --name node3 --charlie
 
   explorer:
     image: jacogr/polkadot-js-apps:latest
@@ -55,6 +55,7 @@ services:
     ports:
       - "3000:80"
     environment:
-      - WS_URL=ws://node1:9944
-    depends_on:
-      - node1
+      - WS_URL=ws://localhost:9944
+      - WS_PORT=9944
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
