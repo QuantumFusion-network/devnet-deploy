@@ -1,3 +1,6 @@
+> [!NOTE]
+> Archived because: we stopped using docker image, scripts from this repository. For testnet+ we moved to private repo for deploy, and for  users/developers we try to create tools close to source repos.
+
 # Substrate Node Deployment
 
 This project provides a setup for running and deploying Substrate-based nodes locally or on virtual machines. It includes Docker configuration for ease of use and flexibility.
